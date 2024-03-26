@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/svg+xml" href="/img/store.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="/CSS/nomalize.css">
+    <link rel="stylesheet" href="/CSS/styles.css">
+    <title>Store</title>
+</head>
+
+<body>
+    <header class="header">
+        <a href="index.html">
+            <img class="header__logo" src="/img/logo.png" alt="logo">
+        </a>
+    </header>
+    <nav class="nav">
+        <a class="nav__link" href="index.html">Store</a>
+        <a class="nav__link " href="about.html">About Us</a>
+    </nav>
+
+    <main class="container">
+        <h1>Producto</h1>
+        <div class="shirt">
+            <img class="shirt__img" src="/img/3.jpg" alt="shirt-react">
+            <div>
+                <p class="shirt__decs">
+                    ¡Demuestra tu amor por el desarrollo web moderno con nuestra playera con el logo de React.js!
+                    Diseñada para los amantes del front-end, esta playera combina estilo y tecnología en un solo diseño.
+                </p>
+                <form class="form">
+                    <select class="form__field">
+                        <option selected disabled>Seleccionar talla</option>
+                        <option>Chica</option>
+                        <option>Mediana</option>
+                        <option>Grande</option>
+                    </select>
+                    <input class="form__field" type="number" placeholder="Cantidad" min="1">
+                    <input class="form__submit" type="submit" value="Agregar al carrito">
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <p class="footer__text">Front-Store - &copy Todos los derechos reservados</p>
+    </footer>
+</body>
+
+</html>

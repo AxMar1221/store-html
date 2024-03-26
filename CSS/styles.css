@@ -1,0 +1,222 @@
+:root {
+    --primary: #9c27b0;
+    --darkPrimary: #89119d;
+    --secondary: #ffce00;
+    --darkSecondary: #dbb004;
+    --white: #ffffff;
+    --black: #000000;
+
+    --mainSource: 'Roboto';
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+/* globals */
+body {
+    background-color: var(--primary);
+    font-size: 1.6rem;
+    line-height: 1.5;
+}
+p {
+    font-size: 1.8rem;
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--white);
+}
+a {
+    text-decoration: none;
+}
+img {
+    width: 100%;
+}
+.container {
+    max-width: 120rem;
+    margin: 0 auto;
+}
+h1, h2, h3 {
+    text-align: center;
+    color: var(--secondary);
+    font-family: var(--mainSource);
+}
+h1 {
+    font-size: 4rem;
+}
+h2 {
+    font-size: 3.2rem;
+}
+h3 {
+    font-size: 2.4rem;
+}
+/* header */
+.header {
+    display: flex;
+    justify-content: center;
+}
+.header__logo {
+    margin: 3rem 0;
+}
+/* nav */
+.nav {
+    background-color: var(--darkPrimary);
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+.nav__link {
+    font-family: var(--mainSource);
+    color: var(--white);
+    font-size: 3rem;
+}
+.nav--link--active,
+.nav__link:hover {
+    color: var(--secondary);
+}
+.footer {
+    background-color: var(--darkPrimary);
+    padding: 1rem;
+    margin-top: 2rem;
+}
+.footer__text {
+    text-align: center;
+    font-family: var(--mainSource);
+    font-size: 3rem;
+}
+.grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+}
+@media (min-width: 768px){
+    .grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+/* products */
+.product {
+    background-color: var(--darkPrimary);
+    padding: 1rem;
+}
+.product__name {
+    font-size: 2.5rem;
+}
+.product__price {
+    font-size: 2rem;
+    color: var(--secondary);
+}
+.product__name,
+.product__price {
+    font-family: var(--mainSource);
+    margin: 1rem 0;
+    text-align: center;
+    line-height: 1.2;
+}
+/* imagenes de fondo */
+.bgImg {
+    min-height: 30rem;
+    background-repeat: no-repeat;
+    background-size: cover;
+    grid-column: 1/3;
+}
+.bgImg__shirts {
+    grid-row: 2/3;
+    background-image: url(/img/grafico1.jpg);
+}
+.bgImg__node {
+    background-image: url(/img/grafico2.jpg);
+    grid-row: 8/9;
+}
+@media (min-width: 768px) {
+    .bgImg__node {
+        grid-row: 5/6;
+        grid-column: 2/4;
+    }
+}
+/* about-us page */
+.about__us {
+    display: grid;
+    grid-template-columns: 1fr;
+    column-gap: 2rem;
+    padding: 1rem;
+    background-color: var(--darkPrimary);
+}
+@media (min-width: 768px) {
+    .about__us {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .about__us--img {
+        width: 100%;
+        grid-column: 2/3;
+    }
+}
+.about__us--img {
+    width: 100%;
+    grid-row: 1/1;
+}
+.about__us--text {
+    font-family: var(--mainSource);
+    font-weight: 500;
+    text-align: justify;
+}
+/* bloques */
+.about__icons {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem 0;
+}
+@media (min-width: 768px) {
+    .about__icons {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+.benefits__desc {
+    text-align: center;
+}
+.benefits__title {
+    text-transform: uppercase;
+}
+/* producto */
+@media (min-width: 768px) {
+    .shirt {
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        gap: 2rem;
+    }
+}
+.shirt {
+    margin: 2rem;
+    text-align: justify;
+}
+.form {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 2rem;
+}
+.form__field {
+    border: .5rem solid var(--darkPrimary);
+    background-color: transparent;
+    color: var(--white);
+    font-size: 1.5rem;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 1rem;
+}
+.form__submit {
+    background-color: var(--secondary);
+    border: none;
+    border-radius: .5rem;
+    font-size: 2rem;
+    font-family: var(--mainSource);
+    text-transform: uppercase;
+    padding: 2rem;
+    transition: background-color .5s ease-in;
+    grid-column: 1/3;
+}
+.form__submit:hover {
+    cursor: pointer;
+    background-color: var(--darkSecondary);
+}
